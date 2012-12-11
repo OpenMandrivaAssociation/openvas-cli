@@ -1,15 +1,15 @@
 Summary: 	OpenVAS command line interface
 Name:		openvas-cli
-Version:	1.1.3
-Release:	%mkrel 1
-License:	GPLv2+
+Version:	1.1.5
+Release:	1
+Source0:		http://wald.intevation.org/frs/download.php/851/%name-%version.tar.gz
+source1:	.abf.yml
 Group:		System/Configuration/Networking
-URL:		http://www.openvas.org
-Source:		http://wald.intevation.org/frs/download.php/851/%name-%version.tar.gz
+Url:		http://www.openvas.org
+License:	GPLv2+
 BuildRequires:	cmake
 BuildRequires:	openvas-devel >= 4.0
 BuildRequires:	glib2-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The module OpenVAS-CLI collects command line tools
@@ -28,14 +28,16 @@ sed -i -e 's#-Werror##' `grep -rl Werror *|grep CMakeLists.txt`
 %make
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std -C build
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %{_bindir}/omp
 %{_mandir}/man8/omp.8.*
+
+
+%changelog
+* Sat Apr 02 2011 Funda Wang <fwang@mandriva.org> 1.1.2-1mdv2011.0
++ Revision: 649871
+- import openvas-cli
+
