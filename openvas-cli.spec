@@ -1,7 +1,7 @@
 Summary: 	OpenVAS command line interface
 Name:		openvas-cli
 Version:	1.1.5
-Release:	1
+Release:	2
 Source0:		http://wald.intevation.org/frs/download.php/851/%name-%version.tar.gz
 source1:	.abf.yml
 Group:		System/Configuration/Networking
