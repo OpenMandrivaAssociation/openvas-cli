@@ -5,7 +5,7 @@ Release:	2
 Source0:		http://wald.intevation.org/frs/download.php/851/%name-%version.tar.gz
 source1:	.abf.yml
 Group:		System/Configuration/Networking
-Url:		http://www.openvas.org
+Url:		https://www.openvas.org
 License:	GPLv2+
 BuildRequires:	cmake
 BuildRequires:	openvas-devel >= 4.0
